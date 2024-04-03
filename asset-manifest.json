@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FullStack-socialMedia-app/static/css/main.a3b053d9.css",
+    "main.js": "/FullStack-socialMedia-app/static/js/main.c106a667.js",
+    "static/js/453.658be312.chunk.js": "/FullStack-socialMedia-app/static/js/453.658be312.chunk.js",
+    "index.html": "/FullStack-socialMedia-app/index.html",
+    "main.a3b053d9.css.map": "/FullStack-socialMedia-app/static/css/main.a3b053d9.css.map",
+    "main.c106a667.js.map": "/FullStack-socialMedia-app/static/js/main.c106a667.js.map",
+    "453.658be312.chunk.js.map": "/FullStack-socialMedia-app/static/js/453.658be312.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3b053d9.css",
+    "static/js/main.c106a667.js"
+  ]
+}
