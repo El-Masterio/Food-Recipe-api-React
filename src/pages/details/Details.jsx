@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { GlobalContext } from '../../context';
 
 const Details = () => {
@@ -12,24 +12,23 @@ const Details = () => {
     setErrorMsg,
   } = useContext(GlobalContext);
 
-  async function getRecipeDetails() {
-    try {
-      const res = await fetch(
-        `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
-      );
-      const data = await res.json();
-      if (data) {
-        setRecipeDetailsData(data?.data?.recipe);
-        console.log(recipeDetailsData);
-      }
-    } catch (e) {
-      setErrorMsg(e.message);
-    }
-  }
-
   useEffect(() => {
+    async function getRecipeDetails() {
+      try {
+        const res = await fetch(
+          `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
+        );
+        const data = await res.json();
+        if (data) {
+          setRecipeDetailsData(data?.data?.recipe);
+          console.log(recipeDetailsData);
+        }
+      } catch (e) {
+        setErrorMsg(e.message);
+      }
+    }
     getRecipeDetails();
-  }, []);
+  }, [id]);
 
   return (
     <div className="container mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 gap-10 ">
